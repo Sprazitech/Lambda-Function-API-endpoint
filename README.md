@@ -4,6 +4,9 @@
 **Build a simple serverless file upload system**
 
 
+
+
+
 **What You'll Build (Using AWS Console):**
 
 1. S3 Bucket: For file uploads
@@ -15,6 +18,9 @@
 4. Lambda 2 (API Gateway): Fetches metadata
 
 5. API Gateway: REST endpoint connected to Lambda 2
+
+
+
 
 
 
@@ -30,6 +36,9 @@ iv. Create the bucket
 
 
 
+
+
+
 **2. Create DynamoDB Table**
 
 i. Go to DynamoDB > Tables > Create table
@@ -39,6 +48,9 @@ ii. Table name: fileMetadata
 iii. Partition key: filename (type: String)
 
 iv. Click Create Table
+
+
+
 
 
 
@@ -59,6 +71,9 @@ iii. Permissions: Attach the following:
 iv. Name it: LambdaS3DynamoRole
 
 v. Create Role
+
+
+
 
 
 
@@ -94,6 +109,10 @@ vi. Deploy your code.
 
 
 
+
+
+
+
 **5. Add S3 Trigger to Lambda**
 
 i. In S3TriggerLambda, scroll to Triggers
@@ -105,6 +124,10 @@ iii. Bucket: file-upload-tobi-bucket
 iv. Event type: PUT (ObjectCreated)
 
 v. Check "Enable trigger"
+
+
+
+
 
 
 
@@ -133,6 +156,10 @@ iii. Create a Test Event using this JSON code:
 }
 
 iv. Save and run the test 
+
+
+
+
 
 
 
@@ -194,6 +221,10 @@ vi. Click deploy
 
 
 
+
+
+
+
 **8. Set Up API Gateway**
 
 i. Go to API Gateway > Create API
@@ -211,6 +242,10 @@ iv. Create Resource:
 v. Integration: Choose Lambda function → FetchMetadataLambda
 
 vi. Deploy to a stage: production LambdaS3DynamoRole
+
+
+
+
 
 
 
@@ -250,6 +285,10 @@ Replace:
 REGION, ACCOUNT_ID, and your-bucket-name with your actual values.
 
 v. Create policy
+
+
+
+
 
 
 
