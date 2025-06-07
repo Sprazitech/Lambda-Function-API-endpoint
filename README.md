@@ -51,6 +51,9 @@ iv. Click Create Table
 
 
 
+![Task](Photos/Dynamodb_table.JPG)
+
+
 
 
 
@@ -110,6 +113,11 @@ vi. Deploy your code.
 
 
 
+![Task](Photos/s3_function.JPG)
+
+
+
+
 
 
 
@@ -124,6 +132,11 @@ iii. Bucket: file-upload-tobi-bucket
 iv. Event type: PUT (ObjectCreated)
 
 v. Check "Enable trigger"
+
+
+
+
+![Task](Photos/deploy_s3trigger_function.JPG)
 
 
 
@@ -156,6 +169,11 @@ iii. Create a Test Event using this JSON code:
 }
 
 iv. Save and run the test 
+
+
+
+
+![Task](Photos/test_eventS3trigger_function.JPG)
 
 
 
@@ -222,6 +240,16 @@ vi. Click deploy
 
 
 
+![Task](Photos/fetchmetadata_lambda.JPG)
+
+
+
+
+
+
+![Task](Photos/test_metadatafunction.JPG)
+
+
 
 
 
@@ -242,6 +270,16 @@ iv. Create Resource:
 v. Integration: Choose Lambda function → FetchMetadataLambda
 
 vi. Deploy to a stage: production LambdaS3DynamoRole
+
+
+
+
+![Task](Photos/rest_api.JPG)
+
+
+
+
+![Task](Photos/restapi_stage.JPG)
 
 
 
@@ -289,6 +327,15 @@ v. Create policy
 
 
 
+![Task](Photos/lambda_policy.JPG)
+
+
+
+
+![Task](Photos/API_attachedlambda.JPG)
+
+
+
 
 
 
@@ -303,3 +350,8 @@ iii. Check metadata:
      Go to the API URL and copy the URL to your browser
      
 iv. Your fileMetadata should display content Table.
+
+
+
+
+![Task](Photos/test_result.JPG)
